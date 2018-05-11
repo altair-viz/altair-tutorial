@@ -1,0 +1,3 @@
+altair
+vega_datasets
+vega3
