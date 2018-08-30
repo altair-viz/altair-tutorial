@@ -3,6 +3,8 @@ Notebooks for the Altair tutorial, given at PyCon 2018
 
 View the content at [notebooks/Index.ipynb](notebooks/Index.ipynb)
 
+Intro slides on [SpeakerDeck](https://speakerdeck.com/jakevdp/altair-tutorial-intro-pycon-2018)
+
 See the video [on YouTube](https://www.youtube.com/watch?v=ms29ZPUKxbU)
 
 See the Altair documentation at http://altair-viz.github.io/
