@@ -1,0 +1,11 @@
+name: altair-tutorial
+channels:
+          - conda-forge
+dependencies:
+          - python
+          - altair
+          - numpy
+          - pandas
+          - rise
+          - vega
+          - vega_datasets
