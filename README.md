@@ -14,3 +14,4 @@ See the Altair documentation at http://altair-viz.github.io/
 If you have a Google/Gmail account, you can Run this tutorial from your browser using Colab: [Open in Colab](https://colab.research.google.com/github/altair-viz/altair-tutorial/blob/master/notebooks/Index.ipynb).
 
 Also you can run in Binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/akielbowicz/altair-tutorial.git/master)
+(Remember to enable the **notebook** renderer)
