@@ -1,0 +1,8 @@
+# Book settings
+title: Altair Tutorial
+author: Jake Vanderplas and Eitan Lees
+logo: 'images/altair-logo.png'
+html:
+  favicon: "images/favicon.ico"
+repository:
+    url: "https://github.com/altair-viz/altair-tutorial"

@@ -1,0 +1,11 @@
+- file: README
+- file: notebooks/Index
+- file: notebooks/01-Cars-Demo
+- file: notebooks/02-Simple-Charts
+- file: notebooks/03-Binning-and-aggregation
+- file: notebooks/04-Compound-charts
+- file: notebooks/05-Exploring
+- file: notebooks/06-Selections
+- file: notebooks/07-Transformations
+- file: notebooks/08-Configuration
+- file: notebooks/09-Geographic-plots
