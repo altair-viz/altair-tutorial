@@ -1,0 +1,342 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Outline &#8212; Altair Tutorial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mystnb.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Demo: Exploring the Cars Dataset" href="01-Cars-Demo.html" />
+    <link rel="prev" title="Exploratory Data Visualization with Altair" href="../README.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/altair-logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Altair Tutorial</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../README.html">Exploratory Data Visualization with Altair</a>
+  </li>
+  <li class="active">
+    <a href="">Outline</a>
+  </li>
+  <li class="">
+    <a href="01-Cars-Demo.html">Demo: Exploring the Cars Dataset</a>
+  </li>
+  <li class="">
+    <a href="02-Simple-Charts.html">Simple Charts: Core Concepts</a>
+  </li>
+  <li class="">
+    <a href="03-Binning-and-aggregation.html">Binning and Aggregation</a>
+  </li>
+  <li class="">
+    <a href="04-Compound-charts.html">Compound Charts</a>
+  </li>
+  <li class="">
+    <a href="05-Exploring.html">Exploring a DataSet</a>
+  </li>
+  <li class="">
+    <a href="06-Selections.html">Interactivity and Selections</a>
+  </li>
+  <li class="">
+    <a href="07-Transformations.html">Transformations</a>
+  </li>
+  <li class="">
+    <a href="08-Configuration.html">Chart Configuration</a>
+  </li>
+  <li class="">
+    <a href="09-Geographic-plots.html">Geographic Plots</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../_sources/notebooks/Index.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Edit this page -->
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+            <div class="dropdown-buttons">
+                
+                <a class="binder-button" href="https://mybinder.org/v2/gh/altair-viz/altair-tutorial/master?urlpath=tree/notebooks/Index.ipynb"><button type="button" class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip" data-placement="left"><img class="binder-button-logo" src="../_static/images/logo_binder.svg" alt="Interact on binder">Binder</button></a>
+                
+                
+                
+            </div>
+        </div>
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#motivating-altair-live-demo" class="nav-link">1. Motivating Altair: Live Demo</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#simple-charts-core-concepts" class="nav-link">2. Simple Charts: Core Concepts</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#binning-and-aggregation" class="nav-link">3. Binning and Aggregation</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#layering-and-concatenation" class="nav-link">4. Layering and Concatenation</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#exploring-a-dataset" class="nav-link">5. Exploring a Dataset!</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#selections-making-things-interactive" class="nav-link">6. Selections: making things interactive</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#transformations-data-streams-within-the-chart-spec" class="nav-link">7. Transformations: Data streams within the chart spec</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#config-adjusting-your-charts" class="nav-link">8. Config: Adjusting your Charts</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#geographic-charts-maps" class="nav-link">9. Geographic Charts: Maps</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#try-it-out" class="nav-link">10. Try it out!</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="outline">
+<h1>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">¶</a></h1>
+<p>These notebooks contain an introduction to exploratory data analysis with <a class="reference external" href="http://altair-viz.github.io">Altair</a>.</p>
+<p>Materials can be found online at http://github.com/altair-viz/altair-tutorial</p>
+<p>To get Altair and its dependencies installed, please follow the <a class="reference external" href="https://altair-viz.github.io/getting_started/installation.html">Installation Instructions</a> on Altair’s website.</p>
+<div class="section" id="motivating-altair-live-demo">
+<h2>1. Motivating Altair: Live Demo<a class="headerlink" href="#motivating-altair-live-demo" title="Permalink to this headline">¶</a></h2>
+<p>We’ll start with a set of intro slides, followed by a live-coded demo of what it looks like to explore data with Altair.</p>
+<p>Here’s the rough content of the live demo:</p>
+<ul class="simple">
+<li><p><code class="xref any docutils literal notranslate"><span class="pre">01-Cars-Demo.ipynb</span></code></p></li>
+</ul>
+<p>This will cover a lot of ground very quickly. Don’t worry if you feel a bit shaky on some of the concepts; the goal here is a birds-eye overview, and we’ll walk-through important concepts in more detail later.</p>
+</div>
+<div class="section" id="simple-charts-core-concepts">
+<h2>2. Simple Charts: Core Concepts<a class="headerlink" href="#simple-charts-core-concepts" title="Permalink to this headline">¶</a></h2>
+<p>Digging into the basic features of an Altair chart</p>
+<ul class="simple">
+<li><p><code class="xref any docutils literal notranslate"><span class="pre">02-Simple-Charts.ipynb</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="binning-and-aggregation">
+<h2>3. Binning and Aggregation<a class="headerlink" href="#binning-and-aggregation" title="Permalink to this headline">¶</a></h2>
+<p>Altair lets you build binning and aggregation (i.e. basic data flows) into your chart spec.
+We’ll cover that here.</p>
+<ul class="simple">
+<li><p><code class="xref any docutils literal notranslate"><span class="pre">03-Binning-and-aggregation.ipynb</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="layering-and-concatenation">
+<h2>4. Layering and Concatenation<a class="headerlink" href="#layering-and-concatenation" title="Permalink to this headline">¶</a></h2>
+<p>From the simple charts we have seen already, you can begin layering and concatenating charts to build up more complicated visualizations.</p>
+<ul class="simple">
+<li><p><code class="xref any docutils literal notranslate"><span class="pre">04-Compound-charts.ipynb</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="exploring-a-dataset">
+<h2>5. Exploring a Dataset!<a class="headerlink" href="#exploring-a-dataset" title="Permalink to this headline">¶</a></h2>
+<p>Here’s a chance for you to try this out on some data!</p>
+<ul class="simple">
+<li><p><code class="xref any docutils literal notranslate"><span class="pre">05-Exploring.ipynb</span></code></p></li>
+</ul>
+<hr class="docutils" />
+<p><em>Afternoon Break</em></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="selections-making-things-interactive">
+<h2>6. Selections: making things interactive<a class="headerlink" href="#selections-making-things-interactive" title="Permalink to this headline">¶</a></h2>
+<p>A killer feature of Altair is the ability to build interactions from basic building blocks.
+We’ll dig into that here.</p>
+<ul class="simple">
+<li><p><code class="xref any docutils literal notranslate"><span class="pre">06-Selections.ipynb</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="transformations-data-streams-within-the-chart-spec">
+<h2>7. Transformations: Data streams within the chart spec<a class="headerlink" href="#transformations-data-streams-within-the-chart-spec" title="Permalink to this headline">¶</a></h2>
+<p>We saw binning and aggregation previously, but there are a number of other data transformations that Altair makes available.</p>
+<ul class="simple">
+<li><p><code class="xref any docutils literal notranslate"><span class="pre">07-Transformations.ipynb</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="config-adjusting-your-charts">
+<h2>8. Config: Adjusting your Charts<a class="headerlink" href="#config-adjusting-your-charts" title="Permalink to this headline">¶</a></h2>
+<p>Once you’re happy with your chart, it’s nice to be able to tweak things like axis labels, titles, color scales, etc.
+We’ll look here at how that can be done with Altair</p>
+<ul class="simple">
+<li><p><code class="xref any docutils literal notranslate"><span class="pre">08-Configuration.ipynb</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="geographic-charts-maps">
+<h2>9. Geographic Charts: Maps<a class="headerlink" href="#geographic-charts-maps" title="Permalink to this headline">¶</a></h2>
+<p>Altair recently added support for geographic visualizations. We’ll show a few examples of the basic principles behind these.</p>
+<ul class="simple">
+<li><p><code class="xref any docutils literal notranslate"><span class="pre">09-Geographic-plots.ipynb</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="try-it-out">
+<h2>10. Try it out!<a class="headerlink" href="#try-it-out" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Return to your visualization in <code class="xref any docutils literal notranslate"><span class="pre">05-Exploring.ipynb</span></code> and begin adding some interactions &amp; transformations. What can you come up with?</p></li>
+</ul>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../README.html" title="previous page">Exploratory Data Visualization with Altair</a>
+    <a class='right-next' id="next-link" href="01-Cars-Demo.html" title="next page">Demo: Exploring the Cars Dataset</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Jake Vanderplas and Eitan Lees<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>

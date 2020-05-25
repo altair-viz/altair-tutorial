@@ -1,0 +1,123 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Outline\n",
+        "\n",
+        "These notebooks contain an introduction to exploratory data analysis with [Altair](http://altair-viz.github.io).\n",
+        "\n",
+        "Materials can be found online at http://github.com/altair-viz/altair-tutorial\n",
+        "\n",
+        "To get Altair and its dependencies installed, please follow the [Installation Instructions](https://altair-viz.github.io/getting_started/installation.html) on Altair's website.\n",
+        "\n",
+        "## 1. Motivating Altair: Live Demo\n",
+        "\n",
+        "We'll start with a set of intro slides, followed by a live-coded demo of what it looks like to explore data with Altair.\n",
+        "\n",
+        "Here's the rough content of the live demo:\n",
+        "\n",
+        "- [01-Cars-Demo.ipynb](01-Cars-Demo.ipynb)\n",
+        "\n",
+        "This will cover a lot of ground very quickly. Don't worry if you feel a bit shaky on some of the concepts; the goal here is a birds-eye overview, and we'll walk-through important concepts in more detail later.\n",
+        "\n",
+        "## 2. Simple Charts: Core Concepts\n",
+        "\n",
+        "Digging into the basic features of an Altair chart\n",
+        "\n",
+        "- [02-Simple-Charts.ipynb](02-Simple-Charts.ipynb)\n",
+        "\n",
+        "## 3. Binning and Aggregation\n",
+        "\n",
+        "Altair lets you build binning and aggregation (i.e. basic data flows) into your chart spec.\n",
+        "We'll cover that here.\n",
+        "\n",
+        "- [03-Binning-and-aggregation.ipynb](03-Binning-and-aggregation.ipynb)\n",
+        "\n",
+        "## 4. Layering and Concatenation\n",
+        "\n",
+        "From the simple charts we have seen already, you can begin layering and concatenating charts to build up more complicated visualizations.\n",
+        "\n",
+        "- [04-Compound-charts.ipynb](04-Compound-charts.ipynb)\n",
+        "   \n",
+        "## 5. Exploring a Dataset!\n",
+        "\n",
+        "Here's a chance for you to try this out on some data!\n",
+        "\n",
+        "- [05-Exploring.ipynb](05-Exploring.ipynb)\n",
+        "   "
+      ],
+      "metadata": {}
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "---\n",
+        "\n",
+        "*Afternoon Break*\n",
+        "\n",
+        "---"
+      ],
+      "metadata": {}
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 6. Selections: making things interactive\n",
+        "\n",
+        "A killer feature of Altair is the ability to build interactions from basic building blocks.\n",
+        "We'll dig into that here.\n",
+        "\n",
+        "- [06-Selections.ipynb](06-Selections.ipynb)\n",
+        "\n",
+        "## 7. Transformations: Data streams within the chart spec\n",
+        "\n",
+        "We saw binning and aggregation previously, but there are a number of other data transformations that Altair makes available.\n",
+        "\n",
+        "- [07-Transformations.ipynb](07-Transformations.ipynb)\n",
+        "\n",
+        "## 8. Config: Adjusting your Charts\n",
+        "\n",
+        "Once you're happy with your chart, it's nice to be able to tweak things like axis labels, titles, color scales, etc.\n",
+        "We'll look here at how that can be done with Altair\n",
+        "\n",
+        "- [08-Configuration.ipynb](08-Configuration.ipynb)\n",
+        "\n",
+        "## 9. Geographic Charts: Maps\n",
+        "\n",
+        "Altair recently added support for geographic visualizations. We'll show a few examples of the basic principles behind these.\n",
+        "\n",
+        "- [09-Geographic-plots.ipynb](09-Geographic-plots.ipynb)\n",
+        "\n",
+        "## 10. Try it out!\n",
+        "\n",
+        "- Return to your visualization in [05-Exploring.ipynb](05-Exploring.ipynb) and begin adding some interactions & transformations. What can you come up with?"
+      ],
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    },
+    "language_info": {
+      "name": "python",
+      "version": "3.7.6",
+      "mimetype": "text/x-python",
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "pygments_lexer": "ipython3",
+      "nbconvert_exporter": "python",
+      "file_extension": ".py"
+    },
+    "nteract": {
+      "version": "0.23.1"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 4
+}
