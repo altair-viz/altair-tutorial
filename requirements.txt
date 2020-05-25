@@ -1,0 +1,7 @@
+python
+altair
+numpy
+pandas
+rise
+vega
+vega_datasets
